@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 
 function Test() {
   const products = [
@@ -49,13 +47,7 @@ function Test() {
     return (
       <>
         {
-          products.map((item) => {
-            return(
-              <>
-                <span> itasdem:{item} </span>
-              </>
-            )
-          })
+          document.write('<br><br><br><hr>')
         }
       </>
     );
