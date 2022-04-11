@@ -52,7 +52,7 @@ function Test() {
           products.map((item) => {
             return(
               <>
-                <span> item:{item} </span>
+                <span> itasdem:{item} </span>
               </>
             )
           })
