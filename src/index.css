@@ -2,8 +2,8 @@ html {
 	max-width: 2100mm;
 	width:100%;
 	min-height:100%;
-	background-color: #ffffff;
-	position: relative;
+	background-color:#ffffff;
+	position:relative;
 	/*border: 1px solid yelow;*/
 	-webkit-print-color-adjust:exact; /*el navegador imprime los fondos, imagenes o colores*/
 }
@@ -63,15 +63,14 @@ h2{
 	font-variant: small-caps;
 	text-transform: capitalize;
 }
-.catalogue{
-	
-}
+
 .rubro{
 	display:block;
 }
 .rubro__tittle{
 	text-align:center;
 	display:block;
+	outline: 1px solid black;
 }
 .image-container{ /*conteiner A*/
 	display:flex;
@@ -88,12 +87,14 @@ h2{
 .file_img{   /*flex arriba*/
 	height:90%;
 	text-align:center;
+	outline: 1px solid black;
 }
 .tittle-img {  /*flex abajo*/
 	height:10%;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-weight:bold;
 	text-align:center;
+	outline: 1px solid black;
 }
 
 .footer{

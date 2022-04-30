@@ -2,68 +2,112 @@
 function Catalogue() {
   const products = [
     {
-      id: 30201,
-      name: "Chacabuco Harina 0000 x 1kg",
-      rutaimg: "#",
-      rubro: "Harinas",
-    },
-    {
-      id: 310101,
-      name: "9 de oro clasica x 200grs",
-      rutaimg: "#",
-      rubro: "Galletitas",
-    },
-    {
-      id: 30101,
-      name: "Chacabuco Harina x 1 kg",
-      rutaimg: "#",
-      rubro: "Harinas",
-    },
-    {
-      id: 30501,
-      name: "Pureza harina p/pizza x 1kg",
-      rutaimg: "#",
-      rubro: "Harinas",
-    },
-    {
-      id: 400001,
-      name: "Branca Fernet x 1l",
-      rutaimg: "#",
-      rubro: "Bebidas"
-    },
-    {
-      id: 440101,
-      name: "Fresh agua savorizada pomelo x 1,5l",
-      rutaimg: "#",
-      rubro: "Bebidas",
-    },
-    {
-      id: 310102,
-      name: "9 de oro azucaradas x 200grs",
-      rutaimg: "#",
-      rubro: "Galletitas",
-    },
-  ];
+      id:310101,
+      nombre:"9 de oro clasica",
+      ruta:"img/310101.jpg",
+      rubro:"Galletitas"
+    },{
+      id:310102,
+      nombre:"9 de oro azucarada",
+      ruta:"img/310101.jpg",
+      rubro:"Galletitas"
+    },{	
+      id:30101,
+      nombre:"Chacabuco harina comun",
+      ruta:"img/310101.jpg",
+      rubro:"Harinas"
+    },{
+      id:3762,
+      nombre:"asdasd",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:3764,
+      nombre:"porducto2papapap",
+      ruta:"img/310101.jpg",
+      rubro:"Harinas"
+    },{
+      id:37321,
+      nombre:"porducto2lellelele",
+      ruta:"img/310101.jpg",
+      rubro:"Aceites"
+    },{
+      id:1231231,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:123122431,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:123123423231,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:1231234234231,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:3,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:1231423231,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:1231234231,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:1231443231,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    },{
+      id:1231626231,
+      nombre:"sadasdasdasde",
+      ruta:"img/310101.jpg",
+      rubro:"Hogar"
+    }];
+
+    const rubros = products.reduce((allRubros,producto) => {
+      return Array.from(new Set([...allRubros, producto.rubro]));//devuelve un arreglo con todos los rubros sin repetir de todos los objetos del array
+    },[]);
+
     return (
-      <>
         <article className="catalogue">
-          <section className="rubro"> 
-            <div className="rubro__tittle"><h2>Perfumeria</h2></div> 
-            <div className="image-container"> 
-              <div className="image-container__flex-item"> 
-                <div className="file_img"><img src="img/9 de oro.jpg"/></div>
-                <div className="tittle-img">Nombre producto1</div>
-              </div>  
-            </div>
-          </section>
+          {         
+            rubros.map((rub,index) =>{
+              return (
+                <section className="rubro" key={index}> 
+                  <div className="rubro__tittle"><h2>{rub}</h2></div> 
+                  <div className="image-container">
+                    {
+                      products.map(item => {
+                        return item.rubro == rub && (
+                          <div className="image-container__flex-item"> 
+                            <div className="file_img"><img src="img/9 de oro.jpg"/></div>
+                            <div className="tittle-img">{item.nombre}</div>
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                </section>
+              )
+            })
+          }
         </article>
-        <article className="catalogue">
-            {              
-              
-            }
-        </article>
-      </>
     );
 }
-  
+
+
 export default Catalogue;
