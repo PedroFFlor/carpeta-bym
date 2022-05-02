@@ -88,7 +88,7 @@ function Catalogue() {
             rubros.map((rub,index) =>{
               return (
                 <section className="rubro" key={index}> 
-                  <div className="rubro__tittle"><h2>{rub}</h2></div> 
+                  <div className="rubro__tittle"><h2>{rub}</h2></div>  
                   <div className="image-container">
                     {
                       products.map(item => {
