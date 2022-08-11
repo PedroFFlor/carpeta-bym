@@ -78,9 +78,10 @@ function Catalogue() {
       rubro:"Hogar"
     }];
 
-    const rubros = products.reduce((allRubros,producto) => {
+    const rubros = products.reduce((allRubros,producto) => {      //el array.from inicia y forma un array con el 2do parametro
       return Array.from(new Set([...allRubros, producto.rubro]));//devuelve un arreglo con todos los rubros sin repetir de todos los objetos del array
-    },[]);
+    },[]);                                                        //el set va poniendo el 2do parametro en el array son duplicados
+  
 
     return (
         <article className="catalogue">
