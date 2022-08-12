@@ -1,3 +1,4 @@
+import Apis from "./Apis";
 
 function Catalogue() {
   const products = [
@@ -106,6 +107,7 @@ function Catalogue() {
               )
             })
           }
+          <Apis />          {/*probar a ver como queda*/}
         </article>
     );
 }
