@@ -1,4 +1,5 @@
-import Apis from "./Apis";
+import { Fragment, useState } from "react";
+import Pruebas from "../pages/Pruebas";
 
 function Catalogue() {
   const products = [
@@ -82,9 +83,10 @@ function Catalogue() {
     const rubros = products.reduce((allRubros,producto) => {      //el array.from inicia y forma un array con el 2do parametro
       return Array.from(new Set([...allRubros, producto.rubro]));//devuelve un arreglo con todos los rubros sin repetir de todos los objetos del array
     },[]);                                                        //el set va poniendo el 2do parametro en el array son duplicados
-  
-
+    
     return (
+      <Fragment>
+        <Pruebas />
         <article className="catalogue">
           {         
             rubros.map((rub,index) =>{
@@ -107,8 +109,8 @@ function Catalogue() {
               )
             })
           }
-          <Apis />          {/*probar a ver como queda*/}
         </article>
+      </Fragment>
     );
 }
 
