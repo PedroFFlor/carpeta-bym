@@ -36,7 +36,7 @@ const Prueba2 = () =>  {        //ojo que va variando con las versiones
                         {...register("age", { required: "Necesitamos una edad", min: 5, max: 99 })}
                     />
                     <span className="text-danger text-small d-block mb-2">
-                     {errors.age?.message}          {/*es una advertencia mientras llenas el formulario*/}
+                     {errors.age?.message}          {/*es una  advertencia mientras llenas el formulario*/}
                      </span>
                     <button type="submit" className="btn btn-primary">
                         Enviar
